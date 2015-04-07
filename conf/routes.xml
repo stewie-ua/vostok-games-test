@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<root>
+
+	<routes>
+
+        <route match="users" controller="index" action="users" >
+            <route match="{id|num}" controller="index" action="userItem" >
+                <route match="updateHistory" controller="index" action="userUpdateHistory" />
+            </route>
+        </route>
+
+	</routes>
+	
+	<system>
+		<route match="index" controller="index" action="index" />
+		<route match="error404" controller="index" action="page404" />
+	</system>
+
+</root>
